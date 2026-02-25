@@ -40,28 +40,31 @@ void second() {
 
 void third() {
 	std::cout << std::endl << "THIRD VECTOR\n";
+	int v_size = 0;
+	std::cin >> v_size;
+	for (int c = 0; c < v_size; c++) {
+		std::vector<std::vector<int>> second_vector;
 
-	std::vector<std::vector<int>> second_vector;
-	int v_size = rand() % 10 + 1;
 
-	for (int i = 0; i < v_size; i++) {
-		std::vector<int> sub_vector;
+		for (int i = 0; i < v_size; i++) {
+			std::vector<int> sub_vector;
 
-		for (int j = 0; j < v_size; j++) {
-			sub_vector.push_back(rand() % 10);
+			for (int j = 0; j < v_size; j++) {
+				sub_vector.push_back(rand() % 10);
+			}
+			second_vector.push_back(sub_vector);
 		}
-		second_vector.push_back(sub_vector);
-	}
-	for (int i = 0; i < second_vector.at(0).size(); i++) {
-		std::cout << '\t' << '[' << i << ']';
-	} std::cout << "\n\n";
-
-	for (int i = 0; i < second_vector.size(); i++) {
-		std::cout << '[' << i << ']' << '\t';
-
-		for (int j = 0; j < second_vector.at(i).size(); j++) {
-			std::cout << second_vector.at(i).at(j) << '\t';
+		for (int i = 0; i < second_vector.at(0).size(); i++) {
+			std::cout << '\t' << '[' << i << ']';
 		} std::cout << "\n\n";
+
+		for (int i = 0; i < second_vector.size(); i++) {
+			std::cout << '[' << i << ']' << '\t';
+
+			for (int j = 0; j < second_vector.at(i).size(); j++) {
+				std::cout << second_vector.at(i).at(j) << '\t';
+			} std::cout << "\n\n";
+		}
 	}
 }
 
@@ -69,7 +72,7 @@ int main() {
 	system("chcp 1251"); system("cls"); srand(time(NULL));
 	first();
 	second();
-
+	third();
 
 
 	
