@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Shapovalov_test.cpp">
+    <ClCompile Include="shapovalov_task_12-7.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
